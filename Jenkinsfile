@@ -28,7 +28,7 @@ pipeline {
 		}
             steps {
                 slackSend (color: '#00FF00', message: "Deploying: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-                bat './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///C:/Users/Sharon/Documents/Concordia/Winter 2020/SOEN345/Assignments/Assignment 6/Part 2/spring-petclinic'
+                bat './mvnw deploy -DaltDeploymentRepository=internal.repo::default::file:///C:/Users/Sharon/Documents/Concordia/Winter 2020/SOEN345/Assignments/Assignment 6/spring-petclinic'
             }
         }
   }
