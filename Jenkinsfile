@@ -32,4 +32,9 @@ pipeline {
         }
     }
   }
+  post {
+	success {
+		slackSend (color: '#00FF00', message: "Build Success! '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+	}
+}
 }
