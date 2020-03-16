@@ -32,13 +32,4 @@ pipeline {
         }
     }
   }
-  post {
-	success {
-		emailext (
-			subject: "Successful job: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-			body: "The Jenkins job was successful: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-			recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-		)
-	}
-}
 }
